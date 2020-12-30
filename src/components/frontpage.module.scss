@@ -1,0 +1,17 @@
+@import "./_variables.scss";
+
+.frontpage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid green; //debug
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 1.45rem;
+    }
+}
+
+// img {    
+//     width: 45vmin;
+// }

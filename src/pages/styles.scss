@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.parent {
+    background: #fcfcfc;
+    color: #212121;
+    min-height: 100vh;  //debug
+    // border: 1px solid red; //debug
+    display: flex;
+    flex-direction: column;
+}
+.parent.dark {
+    background: #212121;
+    color: #fcfcfc;
+}
+h1,h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+h1 {
+    font-weight: 800;
+}
+h2 {
+    font-weight: 400;
+}
+p {
+    font-family: 'PT Serif', serif;
+}

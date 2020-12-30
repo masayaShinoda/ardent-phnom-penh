@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,OAAO,CAAC,4FAAI;AACZ,OAAO,CAAC,uGAAI;ADCZ,AAAA,UAAU,CAAC;EACP,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,eAAe,EAAE,MAAM;EACvB,MAAM,EAAE,eAAe;CAM1B;;AAVD,AAKI,UALM,CAKN,QAAQ,CAAC;EACL,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,IAAI;EACf,UAAU,EAAE,OAAO;CACtB",
+    "sources": [
+        "frontpage.module.scss",
+        "_variables.scss"
+    ],
+    "names": [],
+    "file": "frontpage.module.css"
+}
