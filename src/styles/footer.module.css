@@ -1,6 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 .footer {
-  font-size: .8rem;
+  width: 80vw;
+  position: fixed;
+  height: 5vmin;
+  bottom: 1.25vmin;
+  left: 8vw;
+  right: 8vw;
+}
+
+.footer p {
+  font-size: .69rem;
+  font-weight: 400;
+  font-family: "PT Serif", sans-serif;
 }
 /*# sourceMappingURL=footer.module.css.map */

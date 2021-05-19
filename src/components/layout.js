@@ -1,18 +1,50 @@
 import React from "react"
-import SEO from "../components/seo"
-import Nav from "../components/nav"
-import Footer from "../components/footer"
+import { useState, useEffect } from "react";
 
-import Styles from "../components/layout.module.css"
+import SEO from "./seo"
+import Nav from "./nav"
+import Footer from "./footer"
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMoon } from '@fortawesome/free-solid-svg-icons'
 //import css reset
-import "./reset.css"
+import "../styles/reset.css"
+import "../styles/layout.css"
 
 function Layout({ children }) {
+    const [isDarkMode, setDarkMode] = useState(JSON.parse(localStorage.getItem("mode")));
+    
+    useEffect(() => {
+        // document.getElementById("parent").classList.toggle("dark")
+        if(isDarkMode) {
+            document.getElementById("parent").classList.add("dark");
+            localStorage.setItem("mode", true)
+        } else {
+            document.getElementById("parent").classList.remove("dark");
+            localStorage.setItem("mode", false)
+        }
+        localStorage.setItem("mode", Boolean(isDarkMode))
+        
+    })
+    
+    const goDarkBtn =  
+        <button 
+                onClick={() => {
+                    setDarkMode(!isDarkMode);
+                    localStorage.setItem("mode", Boolean(!isDarkMode))
+                }} 
+                className="goDarkBtn"
+                title="Lights on/off"
+            >                
+                <FontAwesomeIcon icon={faMoon} />
+        </button>
     return (
         <div id="parent" className="parent"> {/* no dark className by default so that useEffect toggles it to dark by default */}
             <SEO></SEO>
-            <Nav></Nav> 
-            <div className={Styles.content}>
+            <Nav goDarkBtn={goDarkBtn}>
+                
+            </Nav> 
+            <div className="content">
                 {children}
             </div>
             <Footer></Footer>

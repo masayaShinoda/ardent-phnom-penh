@@ -1,0 +1,32 @@
+@import "./variables";
+
+.navContainer {
+    $width: 100%;
+    $width-mobile: 90vw;
+    width: $width;
+    height: $nav-height;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10vh 10vw;
+    display: flex;
+    align-items: flex-end;
+    z-index: 20;
+    // border: 1px solid red; //debug
+    p {
+        margin: 0;
+    }
+
+}
+@media (max-width: $mobile-bp) {
+    .navContainer {
+        $width: 90vw;
+        width: $width;
+        left: 5vw;
+        right: 5vw;
+        top: 4.25vh;
+
+        border: 1px solid green; //debug
+    }
+}

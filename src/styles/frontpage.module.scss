@@ -1,0 +1,32 @@
+@import "./variables";
+
+.frontpage {
+    $width: 80vw;
+    width: $width;
+    max-width: $width;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    margin-top: 12.5vh; // push down to make room for nav
+    border: 1px solid green; //debug
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 1.45rem;
+    }
+}
+.frontpageContent {
+    margin-top: $carousel-height;
+    z-index: 2;
+    background: $dark;
+}
+@media (max-width: $mobile-bp) {
+    .frontpage {
+        $width: 90vw;
+        width: $width;
+    }
+}
+
+// img {    
+//     width: 45vmin;
+// }

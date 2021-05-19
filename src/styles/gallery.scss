@@ -1,14 +1,25 @@
-$carousel-height: 400px;
-$control-size: 50px;
+@import "./variables";
 
 .carousel {
-  width: 80vw;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: $nav-height + 10vh;
+  display: flex;
+  justify-content: center;
   height: $carousel-height;
-  border-radius: 3px;
+  // max-height: 50vh;
+  // border-radius: 3px;
   overflow: hidden;
-  position: relative;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-  
+  // box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  background: $dark;
+  padding: 0 10vw;
+  z-index: 1;
+  // z-index: -10;
+  video {
+    // max-width: 80vw;
+    margin: 0;
+  }
   &:hover .controls {
     opacity: 1;
   }
@@ -17,14 +28,15 @@ $control-size: 50px;
     opacity: 0;
     display: flex;
     position: absolute;
-    top: 50%;
+    // top: 50%;
+    top: 45%;
     left: 0;
     justify-content: space-between;
     width: 100%;
-    z-index: 99999;
+    z-index: 10;
     transition: all ease 0.5s;
     .control {
-      margin: 0 5px;
+      margin: 0 12px;
       display: flex;
       align-items: center;
       justify-content: center;

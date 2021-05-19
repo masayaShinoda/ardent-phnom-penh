@@ -1,0 +1,17 @@
+@import "./variables";
+
+.footer {
+    $width: 80vw;
+    width: $width;
+    position: fixed;
+    height: 5vmin;
+
+    bottom: 1.25vmin;
+    left: $width / 100 * 10;
+    right: $width / 100 * 10;    
+    p {
+        font-size: .69rem;
+        font-weight: 400;
+        font-family: $body;        
+    }
+}

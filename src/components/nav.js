@@ -1,23 +1,15 @@
 import React from "react"
-import { useState, useEffect } from "react";
-import Styles from "./nav.module.css"
+import { Link } from "gatsby"
 
-function Nav() {
-    const [isDarkMode, setDarkMode] = useState(false);
- 
-    useEffect(() => {
-        // if(isDarkMode) {
-            document.getElementById("parent").classList.toggle("dark")
-        // }
-    })
+import Styles from "../styles/nav.module.css"
+
+export default function Nav ({ goDarkBtn }) {
+   
     return (
         <div className={Styles.navContainer}>
-            <button onClick={() => {
-                setDarkMode(!isDarkMode);
-                // localStorage.setItem("mode", JSON.stringify(isDarkMode))
-            }}>Go dark!</button>
+            <Link to="/">Home</Link>
+            {goDarkBtn}
         </div>
     )
 }
 
-export default Nav

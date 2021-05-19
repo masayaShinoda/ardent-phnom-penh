@@ -23,6 +23,14 @@
   color: #fcfcfc;
 }
 
+.parent.dark p, .parent.dark a {
+  color: #fcfcfc;
+}
+
+.parent.dark svg path {
+  color: #fcfcfc;
+}
+
 h1, h2 {
   font-family: 'Montserrat', sans-serif;
 }

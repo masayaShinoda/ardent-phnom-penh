@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  font-weight: 800;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+p {
+  font-family: 'PT Serif', serif;
+}
+
+.parent {
+  background: #fcfcfc;
+  color: #212121;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.parent.dark {
+  background: #212121;
+  color: #fcfcfc;
+}
+
+.parent.dark p, .parent.dark a {
+  color: #fcfcfc;
+}
+
+.parent.dark svg path {
+  color: #fcfcfc;
+}
+
+.goDarkBtn {
+  border: 0;
+  background: 0;
+  cursor: pointer;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=layout.module.css.map */
