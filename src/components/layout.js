@@ -12,28 +12,42 @@ import "../styles/reset.css"
 import "../styles/layout.css"
 
 function Layout({ children }) {
-    const [isDarkMode, setDarkMode] = useState(false);
-    
+    const [isDarkMode, setDarkMode] = useState(false)
+    const darkmodeStatus = localStorage.getItem("darkmode")
+
     useEffect(() => {
-        // document.getElementById("parent").classList.toggle("dark")
-        if(isDarkMode) {
-            document.getElementById("parent").classList.add("dark");
-            // localStorage.setItem("mode", true)
+        if (darkmodeStatus === "dark") {
+            setDarkMode(true)        
         } else {
-            document.getElementById("parent").classList.remove("dark");
-            // localStorage.setItem("mode", false)
-        }        
-    })
-    
+            setDarkMode(false)                
+        }
+    }, [])
+
+    useEffect(() => {       
+
+        if(isDarkMode) {
+            document.getElementById("parent").classList.add("dark")
+            localStorage.setItem("darkmode", "dark")
+            // setDarkMode(true)//
+        } else {
+            document.getElementById("parent").classList.remove("dark")
+            localStorage.setItem("darkmode", "light")
+            // setDarkMode(false)
+        }
+        // localStorage.setItem("darkmode", isDarkMode)
+
+    }, [isDarkMode])
+
+
     const goDarkBtn =  
         <button 
-                onClick={() => {
-                    setDarkMode(!isDarkMode);
-                }} 
-                className="goDarkBtn"
-                title="Lights on/off"
-            >                
-                <FontAwesomeIcon icon={faMoon} />
+            onClick={() => {
+                setDarkMode(!isDarkMode)
+            }} 
+            className="goDarkBtn"
+            title="Lights on/off"
+        >                
+            <FontAwesomeIcon icon={faMoon} />
         </button>
     return (
         <div id="parent" className="parent"> {/* no dark className by default so that useEffect toggles it to dark by default */}
