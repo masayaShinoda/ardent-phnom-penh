@@ -2,22 +2,45 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 .navContainer {
   width: 100%;
-  height: 7.5vh;
+  min-height: 7.5vh;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  padding: 10vh 10vw;
+  padding: 0 10vw;
+  padding-top: 5vh;
+  padding-bottom: 2.5vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
   z-index: 20;
 }
 
-.navContainer p {
+.navContainer img {
+  max-width: 10vw;
+}
+
+.navContainer nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.navContainer nav a {
+  text-decoration: none;
+  margin-right: 1.1rem;
+}
+
+.navContainer p, .navContainer img, .navContainer a {
   margin: 0;
 }
 

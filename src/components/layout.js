@@ -12,26 +12,23 @@ import "../styles/reset.css"
 import "../styles/layout.css"
 
 function Layout({ children }) {
-    const [isDarkMode, setDarkMode] = useState(JSON.parse(localStorage.getItem("mode")));
+    const [isDarkMode, setDarkMode] = useState(false);
     
     useEffect(() => {
         // document.getElementById("parent").classList.toggle("dark")
         if(isDarkMode) {
             document.getElementById("parent").classList.add("dark");
-            localStorage.setItem("mode", true)
+            // localStorage.setItem("mode", true)
         } else {
             document.getElementById("parent").classList.remove("dark");
-            localStorage.setItem("mode", false)
-        }
-        localStorage.setItem("mode", Boolean(isDarkMode))
-        
+            // localStorage.setItem("mode", false)
+        }        
     })
     
     const goDarkBtn =  
         <button 
                 onClick={() => {
                     setDarkMode(!isDarkMode);
-                    localStorage.setItem("mode", Boolean(!isDarkMode))
                 }} 
                 className="goDarkBtn"
                 title="Lights on/off"

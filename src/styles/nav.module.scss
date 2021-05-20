@@ -4,17 +4,31 @@
     $width: 100%;
     $width-mobile: 90vw;
     width: $width;
-    height: $nav-height;
+    min-height: $nav-height;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    padding: 10vh 10vw;
+    padding: 0 10vw;
+    padding-top: 5vh;
+    padding-bottom:  2.5vh;
     display: flex;
+    justify-content: space-between;
     align-items: flex-end;
     z-index: 20;
     // border: 1px solid red; //debug
-    p {
+    img {max-width: 10vw;}
+    nav {
+        a {
+            text-decoration: none;
+            margin-right: 1.1rem;
+        }
+        display: flex;
+        align-items: flex-end;
+        // border: 1px solid blue; //debug
+
+    }
+    p, img, a {
         margin: 0;
     }
 

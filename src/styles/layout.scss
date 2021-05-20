@@ -7,37 +7,49 @@
 }
 
 
-h1,h2 {
+h1,h2,a {
     font-family: 'Montserrat', sans-serif;
 }
-h1 {
-    font-weight: 800;
-}
-h2 {
-    font-weight: 400;
-}
+h1 {font-weight: 800;}
+h2 {font-weight: 400;}
+a {font-weight: 600;}
 p {
     font-family: 'PT Serif', serif;
 }
 .parent {
-    background: #fcfcfc;
+    background: $light;
     color: #212121;
     min-height: 100vh;  //debug
     // border: 1px solid red; //debug
     display: flex;
     flex-direction: column;
+    .navContainer {
+        background: $light;
+        .logo {display: block}
+        .logoDark {display: none}
+    }
+    .frontpageContent {
+        background: $light;
+        // border: 1px solid red; //debug
+    }
 }
 .parent.dark {
     background: $dark;
-    color: #fcfcfc;
+    color: $light;
     .navContainer {
         background: $dark;
+        .logo {display: none}
+        .logoDark {display: block}
     }
     p, a {
-        color: #fcfcfc;
+        color: $light;
     }
     svg path {
-        color: #fcfcfc;
+        color: $light;
+    }
+    .frontpageContent {
+        background: $dark;
+        // border: 1px solid red; //debug
     }
 }
 .goDarkBtn {
@@ -51,4 +63,5 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }

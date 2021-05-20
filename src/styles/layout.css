@@ -7,7 +7,7 @@
           box-sizing: border-box;
 }
 
-h1, h2 {
+h1, h2, a {
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -19,12 +19,16 @@ h2 {
   font-weight: 400;
 }
 
+a {
+  font-weight: 600;
+}
+
 p {
   font-family: 'PT Serif', serif;
 }
 
 .parent {
-  background: #fcfcfc;
+  background: #ececec;
   color: #212121;
   min-height: 100vh;
   display: -webkit-box;
@@ -36,21 +40,49 @@ p {
           flex-direction: column;
 }
 
+.parent .navContainer {
+  background: #ececec;
+}
+
+.parent .navContainer .logo {
+  display: block;
+}
+
+.parent .navContainer .logoDark {
+  display: none;
+}
+
+.parent .frontpageContent {
+  background: #ececec;
+}
+
 .parent.dark {
   background: #131313;
-  color: #fcfcfc;
+  color: #ececec;
 }
 
 .parent.dark .navContainer {
   background: #131313;
 }
 
+.parent.dark .navContainer .logo {
+  display: none;
+}
+
+.parent.dark .navContainer .logoDark {
+  display: block;
+}
+
 .parent.dark p, .parent.dark a {
-  color: #fcfcfc;
+  color: #ececec;
 }
 
 .parent.dark svg path {
-  color: #fcfcfc;
+  color: #ececec;
+}
+
+.parent.dark .frontpageContent {
+  background: #131313;
 }
 
 .goDarkBtn {
@@ -73,5 +105,6 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
 }
 /*# sourceMappingURL=layout.css.map */

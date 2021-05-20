@@ -1,14 +1,14 @@
 @import "./variables";
 
 .frontpage {
-    $width: 80vw;
+    $width: 100%;
     width: $width;
     max-width: $width;
     display: flex;
     flex-direction: column;
     justify-content: center;    
-    margin-top: 12.5vh; // push down to make room for nav
-    border: 1px solid green; //debug
+    margin: $nav-height + 10vh 0; // push down to make room for nav and footer
+    // border: 1px solid green; //debug
     .gallery {
         display: flex;
         flex-wrap: wrap;
@@ -17,8 +17,7 @@
 }
 .frontpageContent {
     margin-top: $carousel-height;
-    z-index: 2;
-    background: $dark;
+    z-index: 1;
 }
 @media (max-width: $mobile-bp) {
     .frontpage {

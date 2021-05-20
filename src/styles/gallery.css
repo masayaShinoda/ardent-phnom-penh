@@ -13,12 +13,14 @@
           justify-content: center;
   height: 45vh;
   overflow: hidden;
-  background: #131313;
   padding: 0 10vw;
-  z-index: 1;
 }
 
-.carousel video {
+.carousel img {
+  min-width: 100vw;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background: #000;
   margin: 0;
 }
 

@@ -5,7 +5,7 @@ import { useState, useEffect } from "react"
 // import celestialShortBlack from "../images/celestial mockup-02_result.jpg"
 // import celestialLongWhite from "../images/celestial mockup-03_result.jpg"
 // import celestialShortWhite from "../images/celestial mockup-04_result.jpg"
-import celestialGif from "../images/compressed-Celestial-Ad-8S-White-Short-Sleeve-1.webm"
+import celestialGif from "../images/Celestial-Ad-8S-White-Short-Sleeve-1.gif"
 import "../styles/gallery.css"
 
 export default function Gallery() {
@@ -20,10 +20,7 @@ export default function Gallery() {
 
     return (
         <div className="carousel">
-          <video autoplay="autoplay" loop="loop" muted>
-              <source src={celestialGif} type="video/webm" alt="Celestial Gif" />
-              Your browser does not support the video tag.
-          </video>
+          <img src={celestialGif} alt="Celestial Gif" />
           {/* <div className="slides"> */}
             {/* <img src={galleryImages[index]} alt={galleryImages[index]} className="slide" /> */}
           {/* </div> */}
