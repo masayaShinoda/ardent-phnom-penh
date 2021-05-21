@@ -5,16 +5,18 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-
 h1,h2,a {
     font-family: 'Montserrat', sans-serif;
 }
-h1 {font-weight: 800;}
-h2 {font-weight: 400;}
+h1 {font-weight: 800; line-height: 1.1;}
+h2 {font-weight: 400; line-height: 1.1}
 a {font-weight: 600;}
+a:active, a:visited {
+    color: inherit;
+}
 p {
     font-family: 'PT Serif', serif;
+    line-height: 1.6;
 }
 .parent {
     background: $light;
@@ -23,15 +25,27 @@ p {
     // border: 1px solid red; //debug
     display: flex;
     flex-direction: column;
+    h1 {color: #131313} //increase contrast of headings
     .navContainer {
         background: $light;
         .logo {display: block}
         .logoDark {display: none}
     }
+        .fa-moon {display: inline-block}
+        .fa-lightbulb {display: none} 
+
     .frontpageContent {
         background: $light;
         // border: 1px solid red; //debug
     }
+    .actionBtn {
+        padding: 0.5rem 1.1rem;
+        background: $dark;
+        color: $light;
+        text-decoration: none;
+        transition: background .2s ease-in-out;
+    }
+    .actionBtn:hover {background: darken($light, 15%); color: $dark}
 }
 .parent.dark {
     background: $dark;
@@ -41,6 +55,9 @@ p {
         .logo {display: none}
         .logoDark {display: block}
     }
+        .fa-moon {display: none}
+        .fa-lightbulb {display: inline-block}
+    h1 {color: lighten($light, 25%)} //increase contrast of headings
     p, a {
         color: $light;
     }
@@ -51,6 +68,14 @@ p {
         background: $dark;
         // border: 1px solid red; //debug
     }
+    .actionBtn {
+        padding: 0.5rem 1.1rem;
+        background: $light;
+        color: #212121;
+        text-decoration: none;
+    }
+    .actionBtn:hover {background: lighten($dark, 20%); color: $light}
+
 }
 .goDarkBtn {
     border: 0;

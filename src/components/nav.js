@@ -1,8 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Logo from "../images/ardent-logo-01-transparent_result.webp"
-import LogoDark from "../images/ardent-logo-02-transparent_result.webp"
+import Logo from "../images/ardent-black-logo.svg"
+import LogoDark from "../images/ardent-white-logo.svg"
 
 import Styles from "../styles/nav.module.css"
 
@@ -21,6 +21,9 @@ export default function Nav ({ goDarkBtn }) {
             <nav>
                 <Link to="/">
                     Store
+                </Link>
+                <Link to="/">
+                    About
                 </Link>
                 {goDarkBtn}
             </nav>

@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;    
-    margin: $nav-height + 10vh 0; // push down to make room for nav and footer
+    margin: $nav-height + 12.5vh 0; // push down to make room for nav and footer
     // border: 1px solid green; //debug
     .gallery {
         display: flex;
@@ -16,13 +16,25 @@
     }
 }
 .frontpageContent {
-    margin-top: $carousel-height;
+    // margin-top: $carousel-height;
     z-index: 1;
+    margin: 10vh 0;
+    // border: 1px solid teal; //debug
+}
+@media (max-width: $tablet-bp) {
+    .frontpageContent {
+
+        // border: 1px solid red; //debug
+    }
 }
 @media (max-width: $mobile-bp) {
     .frontpage {
         $width: 90vw;
         width: $width;
+    }
+    .frontpageContent {
+        margin: 5vh 0;
+        // border: 1px solid red; //debug
     }
 }
 

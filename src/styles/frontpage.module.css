@@ -13,7 +13,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 17.5vh 0;
+  margin: 20vh 0;
 }
 
 .frontpage .gallery {
@@ -27,13 +27,16 @@
 }
 
 .frontpageContent {
-  margin-top: 45vh;
   z-index: 1;
+  margin: 10vh 0;
 }
 
 @media (max-width: 480px) {
   .frontpage {
     width: 90vw;
+  }
+  .frontpageContent {
+    margin: 5vh 0;
   }
 }
 /*# sourceMappingURL=frontpage.module.css.map */

@@ -16,8 +16,13 @@
     justify-content: space-between;
     align-items: flex-end;
     z-index: 20;
+    box-shadow: 0px 4px 10px rgba(0,0,0,.075);
     // border: 1px solid red; //debug
-    img {max-width: 10vw;}
+    //logo
+    img {
+        min-width: 100px;
+        max-width: 20vmin;
+    }
     nav {
         a {
             text-decoration: none;
@@ -31,16 +36,16 @@
     p, img, a {
         margin: 0;
     }
-
 }
+
 @media (max-width: $mobile-bp) {
     .navContainer {
-        $width: 90vw;
+        $width: 100%;
         width: $width;
-        left: 5vw;
-        right: 5vw;
-        top: 4.25vh;
+        left: 0;
+        right: 0;
+        top: 0;
 
-        border: 1px solid green; //debug
+        // border: 1px solid green; //debug
     }
 }

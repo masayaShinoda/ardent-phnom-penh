@@ -7,6 +7,7 @@ import Footer from "./footer"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMoon } from '@fortawesome/free-solid-svg-icons'
+import { faLightbulb } from '@fortawesome/free-solid-svg-icons'
 //import css reset
 import "../styles/reset.css"
 import "../styles/layout.css"
@@ -39,16 +40,11 @@ function Layout({ children }) {
     }, [isDarkMode])
 
 
-    const goDarkBtn =  
-        <button 
-            onClick={() => {
-                setDarkMode(!isDarkMode)
-            }} 
-            className="goDarkBtn"
-            title="Lights on/off"
-        >                
-            <FontAwesomeIcon icon={faMoon} />
-        </button>
+    const goDarkBtn = <button onClick={() => {setDarkMode(!isDarkMode)}} className="goDarkBtn">
+                        <FontAwesomeIcon icon={faMoon} title="Lights off" style={{width: `1em`, maxWidth: `1em`}} />
+                        <FontAwesomeIcon icon={faLightbulb} title="Lights on" style={{width: `1em`, maxWidth: `1em`}} />
+                      </button>
+                      
     return (
         <div id="parent" className="parent"> {/* no dark className by default so that useEffect toggles it to dark by default */}
             <SEO></SEO>

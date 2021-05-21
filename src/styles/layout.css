@@ -13,18 +13,25 @@ h1, h2, a {
 
 h1 {
   font-weight: 800;
+  line-height: 1.1;
 }
 
 h2 {
   font-weight: 400;
+  line-height: 1.1;
 }
 
 a {
   font-weight: 600;
 }
 
+a:active, a:visited {
+  color: inherit;
+}
+
 p {
   font-family: 'PT Serif', serif;
+  line-height: 1.6;
 }
 
 .parent {
@@ -40,6 +47,10 @@ p {
           flex-direction: column;
 }
 
+.parent h1 {
+  color: #131313;
+}
+
 .parent .navContainer {
   background: #ececec;
 }
@@ -52,8 +63,30 @@ p {
   display: none;
 }
 
+.parent .fa-moon {
+  display: inline-block;
+}
+
+.parent .fa-lightbulb {
+  display: none;
+}
+
 .parent .frontpageContent {
   background: #ececec;
+}
+
+.parent .actionBtn {
+  padding: 0.5rem 1.1rem;
+  background: #131313;
+  color: #ececec;
+  text-decoration: none;
+  -webkit-transition: background .2s ease-in-out;
+  transition: background .2s ease-in-out;
+}
+
+.parent .actionBtn:hover {
+  background: #c6c6c6;
+  color: #131313;
 }
 
 .parent.dark {
@@ -73,6 +106,18 @@ p {
   display: block;
 }
 
+.parent.dark .fa-moon {
+  display: none;
+}
+
+.parent.dark .fa-lightbulb {
+  display: inline-block;
+}
+
+.parent.dark h1 {
+  color: white;
+}
+
 .parent.dark p, .parent.dark a {
   color: #ececec;
 }
@@ -83,6 +128,18 @@ p {
 
 .parent.dark .frontpageContent {
   background: #131313;
+}
+
+.parent.dark .actionBtn {
+  padding: 0.5rem 1.1rem;
+  background: #ececec;
+  color: #212121;
+  text-decoration: none;
+}
+
+.parent.dark .actionBtn:hover {
+  background: #464646;
+  color: #ececec;
 }
 
 .goDarkBtn {

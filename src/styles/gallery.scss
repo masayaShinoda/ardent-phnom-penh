@@ -1,64 +1,58 @@
 @import "./variables";
 
 .carousel {
-  width: 100%;
-  position: fixed;
-  left: 0;
-  top: $nav-height + 10vh;
+  // width: 100%;
+  width: 0;
+  // position: fixed;
+  top: $nav-height + 12.5vh;
   display: flex;
-  justify-content: center;
-  height: $carousel-height;
+  justify-content: flex-start;
+  // height: $carousel-height;
   overflow: hidden;
   padding: 0 10vw;
-  img {min-width: 100vw; object-fit: contain; background: #000; margin: 0;}
-  &:hover .controls {
-    opacity: 1;
+  animation-name: gallery-stretch;
+  animation-fill-mode: forwards;
+  animation-duration: 1.1s;
+  animation-delay: .2s;
+  @keyframes gallery-stretch {
+    0% {width: 0}
+    100% {width: 100% }  
   }
-  
-  .controls {
-    opacity: 0;
-    display: flex;
-    position: absolute;
-    // top: 50%;
-    top: 45%;
-    left: 0;
-    justify-content: space-between;
+  img { margin: 0; max-height: auto; max-width: 45vw; object-fit: contain; object-position: center;}
+  span {
+    max-width: 45ch;
+    min-width: 60vmin;
+    padding: 1.5rem 2.5rem;
+  }
+}
+
+@media (max-width: $tablet-bp) {
+  .carousel {
+    min-height: $carousel-height;
+    // max-height: fit-content;
+    overflow: visible;
+    flex-direction: column;
+    height: auto;
+    max-height: auto;
+    animation-name: none;
     width: 100%;
-    z-index: 10;
-    transition: all ease 0.5s;
-    .control {
-      margin: 0 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 40px;
-      width: 40px;
-      border-radius: 50%;
-      background-color: rgba(255, 255, 255, 0.7);
-      opacity: .5;
-      transition: ease .3s;
-      border: none;
-      cursor: pointer;
-      
-      &:hover {
-        opacity: 1;
-      }
+    // border: 1px solid blue; //debug
+    img  {min-width: 65vmin; max-width: 50vw}
+    span {
+      padding: 2.5rem 0;
+      max-width: 35ch;
     }
   }
-  
-    .slides {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
-      display: flex;
-      width: 100%;
-      transition: 1s ease-in-out all;
-      
-      .slide {
-        min-width: 100%;
-        min-height: $carousel-height;
-        height: auto;
-      }
+}
+
+@media (max-width: $mobile-bp) {
+  .carousel {
+    // border: 1px solid red; //debug
+    max-height: auto;
+    padding: 0 5vw;
+    img {
+      max-width: 100%;
     }
+    // span {ma}
+  }
 }
