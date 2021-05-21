@@ -11,7 +11,7 @@ module.exports = {
     description:
       "Coming soon",
     url: "https://instagram.com/ardent.phnompenh", // No trailing slash allowed!
-    image: "./images/ardent-logo-01.png", // Path to your image you placed in the 'static' folder
+    image: "./src/images/ardent-logo-06-01.png", // Path to your image you placed in the 'static' folder
     instagramTag: "@ardent.phnompenh"
   },
   plugins: [
@@ -25,7 +25,7 @@ module.exports = {
         background_color: `#333`,
         theme_color: `#333`,
         display: `standalone`,
-        icon: `./favicon.png`
+        icon: `./src/images/ardent-logo-06-01.png`
       },
     },
     `gatsby-image`,
