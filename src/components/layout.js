@@ -12,9 +12,15 @@ import { faLightbulb } from '@fortawesome/free-solid-svg-icons'
 import "../styles/reset.css"
 import "../styles/layout.css"
 
+// Check if window is defined (so if in the browser or in node.js).
+const isBrowser = typeof window !== "undefined"
+  
 function Layout({ children }) {
     const [isDarkMode, setDarkMode] = useState(false)
-    const darkmodeStatus = localStorage.getItem("darkmode")
+
+    if (isBrowser) {    
+        const darkmodeStatus = localStorage.getItem("darkmode")
+    }
 
     useEffect(() => {
         if (darkmodeStatus === "dark") {
