@@ -38,5 +38,11 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-datocms`,
+      options: {
+        apiToken: `5adbddb7e89b6210b10ab4c5244afa`
+      }
+    }
   ],
 }
