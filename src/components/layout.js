@@ -17,16 +17,15 @@ const isBrowser = typeof window !== "undefined"
   
 function Layout({ children }) {
     const [isDarkMode, setDarkMode] = useState(false)
-
-    if (isBrowser) {    
-        const darkmodeStatus = localStorage.getItem("darkmode")
-    }
-
+    
     useEffect(() => {
-        if (darkmodeStatus === "dark") {
-            setDarkMode(true)        
-        } else {
-            setDarkMode(false)                
+        if (isBrowser) {    
+            const darkmodeStatus = localStorage.getItem("darkmode")
+            if (darkmodeStatus === "dark") {
+                setDarkMode(true)        
+            } else {
+                setDarkMode(false)                
+            }
         }
     }, [])
 
