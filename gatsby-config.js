@@ -25,7 +25,7 @@ module.exports = {
         background_color: `#333`,
         theme_color: `#333`,
         display: `standalone`,
-        icon: `public/favicon.png`
+        icon: `/favicon.png`
       },
     },
     `gatsby-image`,
