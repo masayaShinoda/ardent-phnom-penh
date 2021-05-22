@@ -14,11 +14,13 @@ h1, h2, a {
 h1 {
   font-weight: 800;
   line-height: 1.1;
+  margin-bottom: 1.5rem;
 }
 
 h2 {
   font-weight: 400;
   line-height: 1.1;
+  margin-bottom: 1.1rem;
 }
 
 a {
@@ -34,6 +36,22 @@ p {
   line-height: 1.6;
 }
 
+p, span {
+  max-width: 50ch;
+}
+
+@media (max-width: 1023px) {
+  p, span {
+    max-width: 60ch;
+  }
+}
+
+@media (max-width: 480px) {
+  p, span {
+    max-width: 100%;
+  }
+}
+
 .parent {
   background: #ececec;
   color: #212121;
@@ -45,6 +63,7 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 20vh 0;
 }
 
 .parent h1 {

@@ -10,7 +10,7 @@ export default function Gallery() {
           <img src={celestialGif} alt="Celestial Gif" />
           <span>
             <h1>
-              Out Now
+              Out Now!
             </h1>
             <p>Our first collection, "Celestial" is now available for orders in Phnom Penh, Cambodia.</p>
             <Link to="/" className="actionBtn">Get yours!</Link>
