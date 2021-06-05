@@ -18,29 +18,32 @@
 .frontpageContent {
     // margin-top: $carousel-height;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse; //since we render sources content in asc order
     z-index: 1;
     margin: 10vh 0;
-    padding: 3.75vh 10vw;
+    padding: 4.25vh 10vw;
     // border: 1px solid teal; //debug
     .frontpageContentBox {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         flex-wrap: wrap;
+        // border: 1px solid red; //debug
         span {
-            max-width: 40vw;
+            max-width: 40ch;
             margin-right: 2.5vmax;
             margin-bottom: 1.25vh;
         }
     }
     img {
-        min-width: 35vmax;
-        max-width: 35vmax;
-        max-height: 35vmax;
+        min-width: 40vmax;
+        max-width: 40vmax;
+        max-height: 40vmax;
         object-fit: cover;
         object-position: center; 
         margin: 0;
     }
+
 }
 @media (max-width: $tablet-bp) {
     .frontpageContent {
@@ -55,6 +58,7 @@
             min-width: 55vw;
             max-width: 55vw;
             max-height: 50vw;
+            margin: 1.45rem 0;
         }
     }
     

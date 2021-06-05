@@ -5,6 +5,7 @@ import Gallery from "./gallery"
 import Styles from "../styles/frontpage.module.css"
 
 export default function Frontpage() {
+  
   const data = useStaticQuery(graphql`
     query FrontpageQuery {
       allDatoCmsFrontpageContent {
@@ -37,9 +38,13 @@ export default function Frontpage() {
                   <span>
                     <h1>{content.node.heading}</h1>
                     <p>{content.node.text}</p>
+                    {content.node.callToAction 
+                    ? <a href={content.node.callToAction} className="actionBtn">
+                        {content.node.callToActionText}
+                      </a> 
+                    : null}
                   </span>
                   <img src={content.node.image.url} alt={content.node.image.alt && content.node.image.alt} />
-                  {content.node.callToAction ? <a href={content.node.callToAction}>{content.node.callToActionText}</a> : null}
                 </div>
               )
             )
