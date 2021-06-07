@@ -7,13 +7,13 @@ import "../styles/gallery.css"
 export default function Gallery() {
     return (
         <div className="carousel">
-          <img src={celestialGif} alt="Celestial Gif" />
+          {/* <img src={celestialGif} alt="Celestial Gif" /> */}
           <span>
             <h1>
               Out Now!
             </h1>
             <p>Our first collection, "Celestial" is now available for orders in Phnom Penh, Cambodia.</p>
-            <Link to="/" className="actionBtn">Get yours!</Link>
+            <Link to="/shop" className="actionBtn">Get yours!</Link>
           </span>
       </div>
     )

@@ -12,7 +12,7 @@ h1, h2, a {
 }
 
 h1 {
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.1;
   margin-bottom: 1.5rem;
 }
@@ -101,11 +101,22 @@ p, span {
   text-decoration: none;
   -webkit-transition: background .2s ease-in-out;
   transition: background .2s ease-in-out;
+  border-radius: 4px;
 }
 
 .parent .actionBtn:hover {
   background: #e6e6e6;
   color: #131313;
+}
+
+@media (max-width: 480px) {
+  .parent .actionBtn {
+    padding: .8rem 1.1rem;
+  }
+}
+
+.parent .shopContainer .itemContainer {
+  background: #f2f2f2;
 }
 
 .parent.dark {
@@ -114,7 +125,7 @@ p, span {
 }
 
 .parent.dark .navContainer {
-  background: #131313;
+  background: #191919;
 }
 
 .parent.dark .navContainer .logo {
@@ -159,6 +170,10 @@ p, span {
 .parent.dark .actionBtn:hover {
   background: #464646;
   color: #ececec;
+}
+
+.parent.dark .shopContainer .itemContainer {
+  background: #202020;
 }
 
 .goDarkBtn {

@@ -26,7 +26,7 @@ export default function Frontpage() {
       }
     }
   `)
-  console.log(data)
+  // console.log(data)
   return (
     <div className={Styles.frontpage}>
         <Gallery />

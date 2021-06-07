@@ -18,16 +18,19 @@
 .frontpageContent {
     // margin-top: $carousel-height;
     display: flex;
-    flex-direction: column-reverse; //since we render sources content in asc order
+    flex-direction: column; //since we render sources content in asc order
     z-index: 1;
-    margin: 10vh 0;
+    // margin: 10vh 0;
+    margin-top: $nav-height + $carousel-height;
     padding: 4.25vh 10vw;
+    width: 100%;
     // border: 1px solid teal; //debug
     .frontpageContentBox {
         display: flex;
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
+        padding: 4.25vmin 0;
         // border: 1px solid red; //debug
         span {
             max-width: 40ch;
@@ -41,22 +44,26 @@
         max-height: 40vmax;
         object-fit: cover;
         object-position: center; 
-        margin: 0;
+        margin: 3.25vh 0;
     }
 
 }
 @media (max-width: $tablet-bp) {
     .frontpageContent {
         margin: 5vh 0;
+        margin-top: calc(#{$carousel-height}/2);
         // border: 1px solid red; //debug
         .frontpageContentBox {
+            flex-direction: column-reverse;
+            align-items: flex-start;
+            // border: 1px solid red; //debug
             span {
                 max-width: 100%; 
             }
         }
         img {
             min-width: 55vw;
-            max-width: 55vw;
+            max-width: 75vw;
             max-height: 50vw;
             margin: 1.45rem 0;
         }
@@ -65,8 +72,7 @@
 }
 @media (max-width: $mobile-bp) {
     .frontpage {
-        $width: 90vw;
-        width: $width;
+        width: 100%;
     }
     .frontpageContent {
         padding: 2.5vh 5vw;
@@ -75,7 +81,7 @@
             flex-direction: column;
             span {margin: 0;}
         }
-        img {width: 100%; max-width: 100%; margin: 0;}
+        img {width: 100%; max-width: 100%; margin: 3.75vh 0;}
     }
 }
 

@@ -15,7 +15,7 @@ import "../styles/layout.css"
 // Check if window is defined (so if in the browser or in node.js).
 const isBrowser = typeof window !== "undefined"
   
-function Layout({ children }) {
+function Layout({ children, title }) {
     const [isDarkMode, setDarkMode] = useState(false)
     
     useEffect(() => {
@@ -52,7 +52,7 @@ function Layout({ children }) {
                       
     return (
         <div id="parent" className="parent"> {/* no dark className by default so that useEffect toggles it to dark by default */}
-            <SEO></SEO>
+            <SEO title={title}></SEO>
             <Nav goDarkBtn={goDarkBtn}>
                 
             </Nav> 

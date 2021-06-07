@@ -2,15 +2,21 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 .carousel {
   width: 0;
-  top: 20vh;
+  position: fixed;
+  top: calc(7.5vh - 5vh);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   overflow: hidden;
-  padding: 0 10vw;
+  background: url("/images/DSC_0815_result.webp");
+  background-size: cover;
+  background-position: center;
   -webkit-animation-name: gallery-stretch;
           animation-name: gallery-stretch;
   -webkit-animation-fill-mode: forwards;
@@ -19,6 +25,7 @@
           animation-duration: 1.1s;
   -webkit-animation-delay: .2s;
           animation-delay: .2s;
+  min-height: 65vh;
 }
 
 @-webkit-keyframes gallery-stretch {
@@ -53,16 +60,29 @@
   max-width: 45ch;
   min-width: 60vmin;
   padding: 1.5rem 2.5rem;
+  margin-right: 10vw;
+  margin-top: 10vh;
+}
+
+.carousel span h1, .carousel span p {
+  color: #ececec !important;
+  text-shadow: 1px 1px 3px rgba(50, 50, 50, 0.425);
+}
+
+.carousel span a {
+  color: #ececec !important;
+  background: #131313 !important;
+}
+
+.carousel span a:hover {
+  color: #131313 !important;
+  background: #ececec !important;
 }
 
 @media (max-width: 1023px) {
   .carousel {
     min-height: 45vh;
     overflow: visible;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     height: auto;
     max-height: auto;
     -webkit-animation-name: none;
@@ -75,13 +95,16 @@
   }
   .carousel span {
     padding: 2.5rem 0;
-    max-width: 35ch;
+    min-width: 20vw;
+    margin-top: 2.5vh;
+    max-width: 30ch;
   }
 }
 
 @media (max-width: 480px) {
   .carousel {
     max-height: auto;
+    left: 0;
     padding: 0 5vw;
   }
   .carousel img {

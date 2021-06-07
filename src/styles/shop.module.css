@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+.shopContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 4.25vh 10vw;
+  width: 100%;
+}
+
+.shopContainer .itemContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 30vmax;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.075);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.075);
+  border-radius: 6px;
+  margin: 0 2.5vw;
+  width: 100%;
+}
+
+.shopContainer .itemContainer .itemThumbnail {
+  margin: 0;
+  max-width: 100%;
+}
+
+.shopContainer .itemContainer span {
+  padding: 2.5vmax 1.25vmax;
+}
+
+@media (max-width: 1023px) {
+  .itemContainer {
+    max-width: 44%;
+  }
+}
+
+@media (max-width: 480px) {
+  .shopContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .shopContainer .itemContainer {
+    max-width: 100%;
+    margin: 3.25vh 0;
+  }
+  .shopContainer .itemContainer:first-of-type {
+    margin-top: 0;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.buyBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  max-width: 30%;
+  border-radius: 4px;
+}
+
+.productPageContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 4.25vh 10vw;
+  width: 100%;
+}
+
+.variantSelection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+.variantSelection .variantSelector {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 30vmax;
+}
+
+.variantSelection .variantSelector .variantSelectorThumbnail {
+  height: 100%;
+  max-height: calc(30vmax * 0.8);
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  margin: 0;
+}
+
+.variantSelection .variantSelector .variantSelectorDetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  opacity: 1;
+  min-width: 100%;
+  max-width: 100%;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  bottom: 0;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  padding-top: 2.25vmax;
+  padding-bottom: 1.5vmax;
+}
+
+.variantSelection .variantSelector .variantSelectorDetails h1, .variantSelection .variantSelector .variantSelectorDetails h2, .variantSelection .variantSelector .variantSelectorDetails span, .variantSelection .variantSelector .variantSelectorDetails p {
+  text-decoration: none;
+}
+
+.variantSelection .variantSelector .variantSelectorDetails .variantUnitPrice {
+  font-family: "Montserrat", Helvetica, sans-serif;
+  font-weight: 800;
+}
+
+@media (max-width: 480px) {
+  .variantSelection .variantSelector {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    bordeR: 1px solid red;
+  }
+}
+
+.paymentMethodContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.paymentMethodContainer .paymentMethodIcon {
+  max-width: 10vmax;
+}
+
+.paymentMethodContainer .paymentMethodQR {
+  max-width: 25vmax;
+}
+/*# sourceMappingURL=shop.module.css.map */

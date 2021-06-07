@@ -4,12 +4,12 @@ import { Link } from "gatsby"
 import Logo from "../images/ardent-black-logo.svg"
 import LogoDark from "../images/ardent-white-logo.svg"
 
-import Styles from "../styles/nav.module.css"
+import styles from "../styles/nav.module.css"
 
 export default function Nav ({ goDarkBtn }) {
    
     return (
-        <div className={Styles.navContainer + ` navContainer`}>
+        <div className={styles.navContainer + ` navContainer`}>
             <Link to="/">
                 <img 
                     className="logo" src={Logo} alt="Logo"
@@ -19,10 +19,10 @@ export default function Nav ({ goDarkBtn }) {
                 />
             </Link>
             <nav>
-                <Link to="/">
-                    Store
+                <Link to="/shop">
+                    Shop
                 </Link>
-                <Link to="/">
+                <Link to="/about">
                     About
                 </Link>
                 {goDarkBtn}

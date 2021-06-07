@@ -8,7 +8,7 @@
 h1,h2,a {
     font-family: 'Montserrat', sans-serif;
 }
-h1 {font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem;}
+h1 {font-weight: 700; line-height: 1.1; margin-bottom: 1.5rem;}
 h2 {font-weight: 400; line-height: 1.1; margin-bottom: 1.1rem;}
 a {font-weight: 600;}
 a:active, a:visited {
@@ -52,14 +52,25 @@ p, span {max-width: 50ch}
         color: $light;
         text-decoration: none;
         transition: background .2s ease-in-out;
+        border-radius: 4px;
     }
     .actionBtn:hover {background: darken($light, 2.5%); color: $dark}
+    @media (max-width: $mobile-bp) {
+        // bigger button on mobile
+        .actionBtn {padding: .8rem 1.1rem;}
+    }
+    .shopContainer {
+        .itemContainer {
+            // border: 1px solid red; //debug
+            background: lighten($light, 2.5%);
+        }
+    }
 }
 .parent.dark {
     background: $dark;
     color: $light;
     .navContainer {
-        background: $dark;
+        background: lighten($dark, 2.5%);
         .logo {display: none}
         .logoDark {display: block}
     }
@@ -83,6 +94,12 @@ p, span {max-width: 50ch}
         text-decoration: none;
     }
     .actionBtn:hover {background: lighten($dark, 20%); color: $light}
+    .shopContainer {
+        .itemContainer {
+            // border: 1px solid red; //debug
+            background: lighten($dark, 5%);
+        }
+    }
 
 }
 .goDarkBtn {
