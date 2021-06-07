@@ -18,10 +18,11 @@
 .frontpageContent {
     // margin-top: $carousel-height;
     display: flex;
+    margin-top: calc(#{$nav-height} + #{$carousel-height});
     flex-direction: column; //since we render sources content in asc order
     z-index: 1;
     // margin: 10vh 0;
-    margin-top: $nav-height + $carousel-height;
+    // margin-top: $nav-height + $carousel-height;
     padding: 4.25vh 10vw;
     width: 100%;
     // border: 1px solid teal; //debug
@@ -29,7 +30,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         padding: 4.25vmin 0;
         // border: 1px solid red; //debug
         span {
@@ -50,12 +51,14 @@
 }
 @media (max-width: $tablet-bp) {
     .frontpageContent {
-        margin: 5vh 0;
-        margin-top: calc(#{$carousel-height}/2);
+        margin: 0;
+        padding-top: 0 ;
         // border: 1px solid red; //debug
         .frontpageContentBox {
-            flex-direction: column-reverse;
+            // flex-direction: column-reverse;
             align-items: flex-start;
+            flex-wrap: wrap;
+            padding:  0;
             // border: 1px solid red; //debug
             span {
                 max-width: 100%; 
@@ -80,8 +83,9 @@
         .frontpageContentBox {
             flex-direction: column;
             span {margin: 0;}
+            a {margin: 1.45rem 0;}
         }
-        img {width: 100%; max-width: 100%; margin: 3.75vh 0;}
+        img {width: 100%; max-width: 100%; margin: 4.25vh 0;}
     }
 }
 

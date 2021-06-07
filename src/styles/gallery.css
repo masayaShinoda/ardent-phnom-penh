@@ -81,6 +81,7 @@
 
 @media (max-width: 1023px) {
   .carousel {
+    display: none;
     min-height: 45vh;
     overflow: visible;
     height: auto;

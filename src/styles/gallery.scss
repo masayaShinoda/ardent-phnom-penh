@@ -52,6 +52,7 @@
 
 @media (max-width: $tablet-bp) {
   .carousel {
+    display: none;
     min-height: $carousel-height;
     // max-height: fit-content;
     overflow: visible;
