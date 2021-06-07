@@ -14,7 +14,7 @@
       -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
-  background: url("/images/DSC_0815_result.webp");
+  background: url("../images/DSC_0815_result.webp");
   background-size: cover;
   background-position: center;
   -webkit-animation-name: gallery-stretch;

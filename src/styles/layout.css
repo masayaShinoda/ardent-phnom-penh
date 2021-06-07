@@ -27,7 +27,7 @@ a {
   font-weight: 600;
 }
 
-a:active, a:visited {
+a:active, a:visited, a:hover {
   color: inherit;
 }
 
