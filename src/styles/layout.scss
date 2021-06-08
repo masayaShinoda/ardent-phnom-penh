@@ -34,6 +34,9 @@ p, span {max-width: 50ch}
     flex-direction: column;
     padding: $nav-height + 12.5vh 0; //make room for nav and footer
     h1 {color: #131313} //increase contrast of headings
+    p, a {
+        color: $dark;
+    }
     .navContainer {
         background: $light;
         .logo {display: block}

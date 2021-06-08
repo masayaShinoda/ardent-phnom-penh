@@ -70,6 +70,10 @@ p, span {
   color: #131313;
 }
 
+.parent p, .parent a {
+  color: #131313;
+}
+
 .parent .navContainer {
   background: #ececec;
 }
