@@ -86,12 +86,16 @@
   }
   .frontpageContent .frontpageContentBox span {
     max-width: 100%;
+    margin-bottom: 1.45rem;
+  }
+  .frontpageContent .frontpageContentBox p:last-child {
+    margin-bottom: 0;
   }
   .frontpageContent img {
     min-width: 55vw;
     max-width: 75vw;
     max-height: 50vw;
-    margin: 1.45rem 0;
+    margin: .5rem 0 2.5vh 0;
   }
 }
 

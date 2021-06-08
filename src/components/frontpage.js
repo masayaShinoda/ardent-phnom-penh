@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Gallery from "./gallery"
 //styles import
-import Styles from "../styles/frontpage.module.css"
+import styles from "../styles/frontpage.module.css"
 
 export default function Frontpage() {
   
@@ -28,18 +28,18 @@ export default function Frontpage() {
   `)
   // console.log(data)
   return (
-    <div className={Styles.frontpage}>
+    <div className={styles.frontpage}>
         <Gallery />
-        <div className={Styles.frontpageContent + ` frontpageContent`}>
+        <div className={styles.frontpageContent + ` frontpageContent`}>
           {data.allDatoCmsFrontpageContent.edges 
             && data.allDatoCmsFrontpageContent.edges.map((content) =>
               (
-                <div className={Styles.frontpageContentBox + ` frontpageContentBox`} style={{margin: `5vmin 0`}}>
+                <div className={styles.frontpageContentBox + ` frontpageContentBox`} style={{margin: `5vmin 0`}}>
                   <span>
                     <h1>{content.node.heading}</h1>
                     <p>{content.node.text}</p>
                     {content.node.callToAction 
-                    ? <a href={content.node.callToAction} className="actionBtn">
+                    ? <a href={content.node.callToAction} className={`actionBtn ${styles.actionBtn}`}>
                         {content.node.callToActionText}
                       </a> 
                     : null}

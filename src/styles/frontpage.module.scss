@@ -61,14 +61,23 @@
             padding:  0;
             // border: 1px solid red; //debug
             span {
-                max-width: 100%; 
+                max-width: 100%;
+                margin-bottom: 1.45rem;
+                
             }
+            p:last-child {
+                margin-bottom: 0;
+            }
+            // .actionBtn {
+            //     border: 1px solid red;
+
+            // }
         }
         img {
             min-width: 55vw;
             max-width: 75vw;
             max-height: 50vw;
-            margin: 1.45rem 0;
+            margin: .5rem 0 2.5vh 0;
         }
     }
     
@@ -88,7 +97,3 @@
         img {width: 100%; max-width: 100%; margin: 4.25vh 0;}
     }
 }
-
-// img {    
-//     width: 45vmin;
-// }
