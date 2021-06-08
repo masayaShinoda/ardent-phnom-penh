@@ -202,4 +202,37 @@ p, span {
           align-items: center;
   width: 100%;
 }
+
+.upperDiv {
+  width: 100%;
+  padding: 0 10vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.upperDiv h1 {
+  margin: 0 auto;
+}
+
+.backBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.backBtn p {
+  margin: 0;
+  font-family: "Montserrat", Helvetica, sans-serif;
+}
+
+.backBtn p:first-letter {
+  text-transform: capitalize;
+}
 /*# sourceMappingURL=layout.css.map */

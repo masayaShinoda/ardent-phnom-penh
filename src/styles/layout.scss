@@ -118,3 +118,25 @@ p, span {max-width: 50ch}
     align-items: center;
     width: 100%;
 }
+.upperDiv {
+    width: 100%;
+    padding: 0 10vw;
+    display: flex;
+    align-items: flex-start;
+    // border: 1px solid red; //debug
+    h1 {
+        margin: 0 auto;
+    }
+}
+.backBtn {
+    display: flex;
+    align-items: center;
+
+    p {
+        margin: 0;
+        font-family: $head;
+    }
+    p:first-letter {
+        text-transform: capitalize;
+    }
+}

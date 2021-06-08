@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
+import BackBtn from "../components/backBtn"
 import styles from "../styles/shop.module.css"
 
 export default function ProductPage({ pageContext }) {
@@ -32,6 +33,9 @@ export default function ProductPage({ pageContext }) {
 
     return (
         <Layout title={currentProductData["itemName"]}>
+            <div className="upperDiv">
+                <BackBtn destination="shop"/>
+            </div>
         {
             currentProductData && (
                 <div className={styles.productPageContainer}>

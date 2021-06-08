@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Layout from "../components/layout"
+import BackBtn from "../components/backBtn"
 import styles from "../styles/shop.module.css"
 
 export default function Shop() {
@@ -38,7 +39,10 @@ export default function Shop() {
 
     return (
         <Layout title="Shop">
-            <h1>Shop</h1>
+            <div className="upperDiv">
+                <BackBtn destination="home"/>
+                <h1>Shop</h1>
+            </div>
             <div className={styles.shopContainer + ` shopContainer`}>
                 {data.allDatoCmsShopItem && data.allDatoCmsShopItem.edges.map(edge => (
                     <div className={styles.itemContainer + ` itemContainer`}>
