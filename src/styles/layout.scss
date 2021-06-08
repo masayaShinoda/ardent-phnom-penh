@@ -122,7 +122,7 @@ p, span {max-width: 50ch}
     width: 100%;
     padding: 0 10vw;
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
     // border: 1px solid red; //debug
     h1 {
         margin: 0 auto;
