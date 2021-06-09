@@ -38,6 +38,12 @@
 }
 
 @media (max-width: 1023px) {
+  .shopContainer .itemContainer span h2 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 1023px) {
   .itemContainer {
     max-width: 44%;
   }

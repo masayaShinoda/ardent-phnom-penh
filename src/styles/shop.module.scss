@@ -23,8 +23,13 @@
             // border-radius: 4px 4px 0 0;
         }
         span {
-            //itembox description
+            // itembox description
             padding: 2.5vmax 1.25vmax;
+            // border: 1px solid green; //debug
+            @media (max-width: $tablet-bp) {
+                h2 {font-size: 1.25rem}
+
+            }
         }
     }
 }
