@@ -18,9 +18,9 @@ p {
     font-family: 'PT Serif', serif;
     line-height: 1.6;
 }
-p, span {max-width: 50ch}
+p, span {max-width: 45ch}
 @media (max-width: $tablet-bp) {
-    p, span {max-width: 60ch}    
+    p, span {max-width: 50ch}    
 }
 @media (max-width: $mobile-bp) {
     p, span {max-width: 100%}    
@@ -68,6 +68,7 @@ p, span {max-width: 50ch}
             background: lighten($light, 2.5%);
         }
     }
+    .contactContainer {background: lighten($light, 2.5%);}
 }
 .parent.dark {
     background: $dark;
@@ -103,6 +104,7 @@ p, span {max-width: 50ch}
             background: lighten($dark, 5%);
         }
     }
+    .contactContainer {background: lighten($dark, 5%);}
 
 }
 .goDarkBtn {

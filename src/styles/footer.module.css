@@ -14,8 +14,8 @@
       -ms-flex-align: end;
           align-items: flex-end;
   bottom: 1.25vmin;
-  left: 8vw;
-  right: 8vw;
+  left: 10%;
+  right: 10%;
 }
 
 .footer p {
@@ -47,6 +47,13 @@
   width: 100%;
   height: 100%;
   margin: 0;
-  margin-right: .5rem;
+  margin-left: .5rem;
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+}
+
+.footer img:hover {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
 }
 /*# sourceMappingURL=footer.module.css.map */
