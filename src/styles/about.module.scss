@@ -1,0 +1,16 @@
+.aboutContainer {
+    display: flex;
+    flex-direction: row;
+    padding: 4.25vh 10vw;
+    width: 100%;
+    // border: 1px solid red; //debug
+    span {
+        max-width: 40vw;
+        // p {
+        //     max-width: 35ch;
+        // }
+    }
+    .contactContainer {
+        
+    }
+}

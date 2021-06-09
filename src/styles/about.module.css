@@ -1,0 +1,16 @@
+.aboutContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 4.25vh 10vw;
+  width: 100%;
+}
+
+.aboutContainer span {
+  max-width: 40vw;
+}
+/*# sourceMappingURL=about.module.css.map */
