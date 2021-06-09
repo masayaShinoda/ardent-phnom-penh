@@ -8,7 +8,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding: 4.25vh 10vw;
+  padding: 4.25vmax 10vw;
   width: 100%;
 }
 
