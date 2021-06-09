@@ -83,8 +83,11 @@ a {text-decoration: none;}
             transition: .2s ease-in-out;
             margin: 0;
         }
+        // .variantSelectorThumbnail:hover {
+        //     filter: blur(1px);
+        // }
         .variantSelectorDetails {
-            display: flex; flex-direction: column;
+            display: flex; flex-direction: row; align-items: flex-end; justify-content: space-between;
             opacity: 1;
             min-width: 100%;
             max-width: 100%;
@@ -92,14 +95,34 @@ a {text-decoration: none;}
             backdrop-filter: blur(2px);
             bottom: 0;
             transition: .2s ease-in-out;
-            padding-top: 2.25vmax;
-            padding-bottom: 1.5vmax;
+            padding: 2.25vmax 1.25vmax 1.5vmax 1.25vmax;
+            // padding-bottom: 1.5vmax;
+            a { //messengerBtn
+                display: flex; align-items: center;
+                transition: .2s ease-in;
+                // margin: 0 1.5rem;                              
+            }
+            img { //messenger logo
+                width: 1.25rem;
+                margin: 0 0 0 .5rem;
+
+            }
             h1, h2, span, p {
                 // margin: 0;
                 text-decoration: none;
             }
-            .variantUnitPrice {font-family: $head; font-weight: 800}
-        }                
+            .variantUnitPrice {font-family: $head; font-weight: 800; margin: 0;}
+        }
+    }
+    .variantSelector:nth-of-type(odd) {
+        .variantSelectorDetails {
+            border-right: 1px solid rgba(0,0,0,.25);
+        }
+    }
+    .variantSelector:nth-of-type(even) {
+        .variantSelectorDetails {
+            border-left: 1px solid rgba(0,0,0,.25);
+        }
     }
     @media(max-width: $mobile-bp) {
         .variantSelector {

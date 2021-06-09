@@ -2,6 +2,7 @@ import React from "react"
 import { Link, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
 import BackBtn from "../components/backBtn"
+import MessengerLogo from "../images/messenger-logo.svg"
 import styles from "../styles/shop.module.css"
 
 export default function ProductPage({ pageContext }) {
@@ -52,13 +53,19 @@ export default function ProductPage({ pageContext }) {
                                         alt={variant["variantThumbnail"]["alt"]}
                                         className={styles.variantSelectorThumbnail}
                                     />
-                                    <span className={styles.variantSelectorDetails}>
-                                        <h2>{variant["variantName"]}</h2>
-                                        <p className={styles.variantUnitPrice}>
-                                            {variant["unitPrice"] * dollarToRielRate}៛
-                                            &nbsp;/&nbsp;
-                                            {variant["unitPrice"]}USD
-                                        </p>
+                                    <span className={styles.variantSelectorDetails + ` variantSelectorDetail`}>
+                                        <span>
+                                            <h2>{variant["variantName"]}</h2>
+                                            <p className={styles.variantUnitPrice}>
+                                                {variant["unitPrice"] * dollarToRielRate}៛
+                                                &nbsp;/&nbsp;
+                                                {variant["unitPrice"]}USD
+                                            </p>
+                                        </span>
+                                        <a href="http://m.me/ardent.phnompenh" className="messengerBtn">
+                                            Get yours
+                                            <img src={MessengerLogo} alt="Messenger logo" />
+                                        </a>
                                     </span>
                                 </div>                                
                             )})

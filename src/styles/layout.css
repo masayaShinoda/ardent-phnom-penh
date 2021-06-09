@@ -127,6 +127,22 @@ p, span {
   background: #f2f2f2;
 }
 
+.parent .variantSelectorDetail {
+  background: #f2f2f2;
+}
+
+.parent .messengerBtn {
+  border-radius: 6px;
+  background: #2d2d2d;
+  color: #ececec;
+  padding: .5rem .8rem;
+}
+
+.parent .messengerBtn:hover {
+  background: #e6e6e6;
+  color: #131313;
+}
+
 .parent.dark {
   background: #131313;
   color: #ececec;
@@ -186,6 +202,20 @@ p, span {
 
 .parent.dark .contactContainer {
   background: #202020;
+}
+
+.parent.dark .variantSelectorDetail {
+  background: #202020;
+}
+
+.parent.dark .messengerBtn {
+  background: #e6e6e6;
+  color: #131313;
+}
+
+.parent.dark .messengerBtn:hover {
+  background: #464646;
+  color: #ececec;
 }
 
 .goDarkBtn {
